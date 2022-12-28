@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(0, #120c56, #000000);
+  font-family: 'Anton', sans-serif;
+}
+
+img {
+  margin-top: 20px;
+  border-radius: 12px;
+  width: 320px;
+  height: 320px;
+  color: white;
+}
+
+h1 {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+p {
+  color: white;
+}
+
+ul {
+  margin-top: 34px;
+}
+
+li {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+a {
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  padding: 15px;
+  display: block;
+  width: 350px;
+  height: 24px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  margin-top: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.bolhas-flutuando, .bolhas-caindo {
+  position: absolute;
+  display: flex;
+}
+
+.bolhas-flutuando span {
+  width: 9px;
+  height: 9px;
+  background: white;
+  margin: 0 4px;
+  border-radius: 50% ;
+  box-shadow: 0 0 0 10px white, 0 0 30px white, 0 0 40px white;
+  animation: animar calc(800s / var(--i)) 1s linear infinite;
+}
+
+.bolhas-caindo span {
+  width: 9px;
+  height: 9px;
+  background: white;
+  margin: 0 4px;
+  border-radius: 50% ;
+  box-shadow: 0 0 0 10px rgb(155, 154, 154), 0 0 30px rgb(78, 78, 78), 0 0 40px rgb(153, 152, 152);
+  animation: animacao calc(600s / var(--i)) 1s linear infinite;
+}
+
+.bolhas-flutuando span:nth-of-type(even), .bolhas-caindo span:nth-of-type(even) {
+  background: #4b4b4d;
+  box-shadow: 0 0 0 10px #4b4b4d44, 0 0 20px #4b4b4d, 0 0 30px #4b4b4d;
+}
+
+@keyframes animar {
+  0% {
+    transform: translateY(100vh) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) scale(0);
+  }
+}
+
+@keyframes animacao {
+  100% {
+    transform: translateY(100vh) scale(0);
+  }
+  0% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
